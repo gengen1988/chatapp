@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="app">
+<head>
+  <meta charset="utf-8">
+
+  <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+  <link href="css/app.css" rel="stylesheet">
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="socket.io/socket.io.js"></script>
+
+  <script src="app.js"></script>
+  <script src="controllers/ChatController.js"></script>
+  <script src="services/ChatService.js"></script>
+</head>
+<body>
+  <div ng-view></div>
+</body>
+</html>

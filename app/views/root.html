@@ -1,0 +1,30 @@
+<div ng-controller="ChatController as chat">
+  <div class="message-pool">
+    <div class="messages">
+      <ul class="list-unstyled">
+        <li ng-repeat="item in chat.messageList">
+          <span>{{item.message}}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="users">
+      <ul class="list-unstyled">
+        <li ng-repeat="user in chat.users">
+          <input ng-model="user.selected" type="checkbox" />
+          <span>{{user.id}}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="send-box">
+    <div class="input-group">
+      <input class="form-control"
+        ng-model="chat.sendingMessage"
+        ng-keydown="chat.send(chat.users, $event)" />
+      <span class="input-group-btn">
+        <button class="btn btn-primary">发送</button>
+      </span>
+    </div>
+  </div>
+</div>
